@@ -18,6 +18,7 @@
         :card="{ index, value: card }"
         :cardsContext="cardsContext"
         @onFlip="checkRule($event)"
+        @offFlip="off($event)"
       />
     </div>
   </div>
@@ -85,6 +86,9 @@ export default {
         }, 800);
         //close 2 card
       } else return false;
+    },
+    off() {
+      this.rules = [];
     },
   },
 };

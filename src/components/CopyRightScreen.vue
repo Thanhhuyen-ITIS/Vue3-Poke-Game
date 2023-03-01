@@ -2,7 +2,7 @@
   <div class="copyright">
     <p>
       This game owned by Team in vue 3 course for beginer
-      <a href="http://">Vieww here</a>
+      <a href="http://">View here</a>
     </p>
   </div>
 </template>

@@ -28,9 +28,7 @@
               3
             }px`,
           }"
-        >
-          F
-        </div>
+        ></div>
       </div>
       <div class="card__face card__face--back">
         <div
@@ -72,6 +70,9 @@ export default {
       if (this.isDisabled) return false;
       this.isFlipped = !this.isFlipped;
       if (this.isFlipped) this.$emit("onFlip", this.card);
+      else {
+        this.$emit("offFlip", this.card);
+      }
     },
 
     onFlipBackCard() {
@@ -122,7 +123,7 @@ export default {
   height: 100%;
 }
 .card__face--back {
-  background-color: var(--light);
+  background-color: #f3f3f3;
   transform: rotateY(-180deg);
 }
 .card__face--back .card__content {
