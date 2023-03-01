@@ -1,19 +1,43 @@
 <template>
-  <div class="card" :class="{ disabled: isDisabled }" :style="{
-    height: `${ ((920-16*4) / Math.sqrt(cardsContext.length) - 16)}px`,
-    width: `${ ((920-16*4) / Math.sqrt(cardsContext.length) - 16) * 3 / 4}px`
-  }" >
-    <div class="card__inner" :class="{'is-flipped': isFlipped}" @click="onToggleFlipCard">
+  <div
+    class="card"
+    :class="{ disabled: isDisabled }"
+    :style="{
+      height: `${(920 - 16 * 4) / Math.sqrt(cardsContext.length) - 16}px`,
+      width: `${
+        (((920 - 16 * 4) / Math.sqrt(cardsContext.length) - 16) * 3) / 4
+      }px`,
+    }"
+  >
+    <div
+      class="card__inner"
+      :class="{ 'is-flipped': isFlipped }"
+      @click="onToggleFlipCard"
+    >
       <div class="card__face card__face--front">
-        <div class="card__content" :style="{
-          backgroundSize: `${ (((920-16*4) / Math.sqrt(cardsContext.length) - 16) * 3) / 4 / 3}px ${ (((920-16*4) / Math.sqrt(cardsContext.length) - 16) * 3) / 4 / 3}px`
-        }">F</div>
+        <div
+          class="card__content"
+          :style="{
+            backgroundSize: `${
+              (((920 - 16 * 4) / Math.sqrt(cardsContext.length) - 16) * 3) /
+              4 /
+              3
+            }px ${
+              (((920 - 16 * 4) / Math.sqrt(cardsContext.length) - 16) * 3) /
+              4 /
+              3
+            }px`,
+          }"
+        >
+          F
+        </div>
       </div>
       <div class="card__face card__face--back">
-        <div class="card__content"
-        :style="{
-          backgroundImage: `url(${require('@/assets' + imgBackFaceUrl)})`,
-        }"
+        <div
+          class="card__content"
+          :style="{
+            backgroundImage: `url(${require('@/assets' + imgBackFaceUrl)})`,
+          }"
         ></div>
       </div>
     </div>
@@ -33,8 +57,8 @@ export default {
     cardsContext: {
       type: Array,
       default: function () {
-        return []
-      }
+        return [];
+      },
     },
   },
   data() {
@@ -56,9 +80,9 @@ export default {
 
     onEnableDisableMode() {
       this.isDisabled = true;
-    }
+    },
   },
-}
+};
 </script>
 
 <style lang="css" scoped>
@@ -78,7 +102,6 @@ export default {
 
 .card.disabled .card__inner {
   cursor: default;
-
 }
 .card__inner.is-flipped {
   transform: rotateY(-180deg);
@@ -91,7 +114,7 @@ export default {
   overflow: hidden;
   border-radius: 1rem;
   padding: 1rem;
-  box-shadow: 0 3px 10px 3px rgba(0,0, 0, 0.2);
+  box-shadow: 0 3px 10px 3px rgba(0, 0, 0, 0.2);
 }
 .card__face--front .card__content {
   background: url("../assets/images/icon_back.png") no-repeat center center;

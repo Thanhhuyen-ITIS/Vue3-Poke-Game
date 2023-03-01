@@ -1,7 +1,7 @@
 <template>
   <div class="screen">
     <h3>Congratulation</h3>
-    <p>{{ Math.round(timer / 1000) }} seconds </p>
+    <p>{{ Math.round(timer / 1000) }} seconds</p>
     <button @click="onStartAgain">Start Again</button>
   </div>
 </template>
@@ -44,7 +44,7 @@ export default {
   font-size: 3rem;
 }
 .screen button {
-  font: 'Odibee Sans', cursive;
+  font: "Odibee Sans", cursive;
   background: transparent;
   box-shadow: none;
   border: 1px solid #f3f3f3;

@@ -55,7 +55,7 @@ export default {
   margin-top: 2rem;
 }
 .modes button {
-  font: 'Odibee Sans', cursive;
+  font: "Odibee Sans", cursive;
   width: 150px;
   height: 150px;
   background: transparent;

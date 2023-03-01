@@ -1,8 +1,10 @@
 <template>
-    <div class="copyright">
-        <p>This game owned by Team in vue 3 course for beginer <a href="http://">Vieww here</a></p>
-    </div>
-   
+  <div class="copyright">
+    <p>
+      This game owned by Team in vue 3 course for beginer
+      <a href="http://">Vieww here</a>
+    </p>
+  </div>
 </template>
 <style lang="css" scoped>
 .copyright {

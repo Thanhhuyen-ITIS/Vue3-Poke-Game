@@ -1,4 +1,4 @@
-template>
+<template>
   <main-screen
     v-if="statusMatch === 'default'"
     @onStart="onHandleBeforeStart($event)"
@@ -8,20 +8,19 @@ template>
     :cardsContext="settings.cardsContext"
     @onFinish="onGetResult"
   />
-  <result-screen 
-  v-if="statusMatch === 'result'"
-  :timer="timer"
-  @onStartAgain="statusMatch = 'default'"
+  <result-screen
+    v-if="statusMatch === 'result'"
+    :timer="timer"
+    @onStartAgain="statusMatch = 'default'"
   />
   <copy-right-screen />
-
 </template>
 
 <script>
 import MainScreen from "./components/MainScreen.vue";
 import InteractScreen from "./components/InteractScreen.vue";
 import { shuffled } from "./utils/array";
-import ResultScreen from "./components/ResultScreen.vue"
+import ResultScreen from "./components/ResultScreen.vue";
 import CopyRightScreen from "./components/CopyRightScreen.vue";
 
 export default {
