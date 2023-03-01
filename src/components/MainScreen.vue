@@ -11,10 +11,10 @@
         <span>6x6</span>
         <span>Normal</span>
       </button>
-      <button @click="onStart(64)">
+      <!-- <button @click="onStart(64)">
         <span>8x8</span>
         <span>Hard</span>
-      </button>
+      </button> -->
     </div>
   </div>
 </template>
